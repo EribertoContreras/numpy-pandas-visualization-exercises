@@ -121,7 +121,7 @@ df
 # In[11]:
 
 
-mpg
+mpg.shape
 
 
 # #How many rows and columns are there? 
@@ -270,18 +270,18 @@ Mammals.describe()
 
 
 #What is the the weight of the fastest animal?
-Mammals[(Mammals.speed > 106)]
-
+#Mammals[(Mammals.speed > 106)]
+Mammals[Mammals.speed == Mammals.speed.max()]
 
 # In[96]:
 
 
 #What is the overal percentage of specials?
 #(Mammals.specials.count)
-Specials_percent=(sum(Mammals.specials) / len(Mammals)) * 100
-print("overall percentage of specials:%", Specials_percent)
+#Specials_percent=(sum(Mammals.specials) / len(Mammals)) * 100
+#print("overall percentage of specials:%", Specials_percent)
 
-
+Mammals.specials.mean()
 # In[105]:
 
 
